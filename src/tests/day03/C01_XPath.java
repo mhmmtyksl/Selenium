@@ -10,7 +10,8 @@ public class C01_XPath {
 
         System.setProperty("webdriver.chrome.driver","/Users/muhammetyuksel/Documents/selenium libraries/drivers/chromedriver/");
         WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        driver.manage().window().maximize(); // maximize etemizin sebebi bazi yazilar kucuk ekranda gozukmez
+        // tam ekran yapinca ortaya cikar bunun icin kodlarin saglikli calisabilmesi icin once buyutmemiz gerekir
 
         // 1- https://the-internet.herokuapp.com/add_remove_elements/ adresine gidin
         driver.get("https://the-internet.herokuapp.com/add_remove_elements/");

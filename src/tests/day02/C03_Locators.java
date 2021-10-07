@@ -71,16 +71,18 @@ public class C03_Locators {
             System.out.println("sign out Linki gorunmuyor, FAILED");
         }
 
-        // 3) Sayfada kac tane link oldugunu bulun.
+        // 3-a) Sayfada kac tane link oldugunu bulun.
         List<WebElement> linkler=driver.findElements(By.tagName("a"));
         System.out.println("Sitenin giris sayfasinda olan link sayisi : "+ linkler.size());
+        //burda elementleri once bir listeye koyuyoruz. tagname i a olanlarin hepsi link tir once hepsini bir list e ekleriz
+        // ardindan size ini alinca eleman sayisini bulmus oluruz
 
-        // Linklerin yazilarini yazdiralim
+        // 3-b) Linklerin yazilarini yazdiralim
         // elimizdeki listedeki tum WebElementler in yazilarini forloop veya foreachloop ile yazdirabiliriz
         // tum elementler yazdirilacaksa foreachloop daha mantiklidir.
 
-        for (WebElement each : linkler) {
-            System.out.println(each.getText());
+        for (WebElement each : linkler) { // bununla tek tek tum linkleri buluruz
+            System.out.println(each.getText()); // bununla da bulunan linklerin hepsini yazdiririz.
         }
 
 
