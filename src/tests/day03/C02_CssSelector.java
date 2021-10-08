@@ -20,6 +20,15 @@ public class C02_CssSelector {
         //	a. Verilen web sayfasına gidin. http://a.testaddressbook.com/sign_in
         driver.get("http://a.testaddressbook.com/sign_in");
 
+        // x.path ve css.Selector de eger birden fazla uyan varsa ilkine yazar hata vermez
+        // css==> tagName[attributeName='attributeValue']
+        // css==> "tagName#id value" veya ="#id value" ile calisir.
+        // css==> "tagName.class value" veya =".class value ile calisir
+        // cssSelector ile x.path in farki
+        // css   =   tagName[attributeName='attributeValue']
+        // xpath = //tagName[@attributeName='attributeValue'] yani sadece burdaki fazladan olan // ve @ isaretidir
+
+
         //	b. Locate email textbox
         Thread.sleep(2000);
         WebElement emailtextBox=driver.findElement(By.cssSelector(".form-control"));
@@ -28,8 +37,10 @@ public class C02_CssSelector {
         //	c. Locate password textbox ve
         //WebElement passwordTexBox1=driver.findElement(By.cssSelector("input[id='session_password']"));
         // css selector ile uzun sekilde yazilis
+
         WebElement passwordTexBox1=driver.findElement(By.cssSelector("#session_password"));
         // css selector ile kisa yazilis
+
         //WebElement passwordTexBox=driver.findElement(By.xpath("(//input[@class='form-control'])[2]"));
         // xpath ile yazilis
 
