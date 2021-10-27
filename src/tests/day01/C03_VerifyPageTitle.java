@@ -16,10 +16,10 @@ public class C03_VerifyPageTitle {
 
         // 3. adim
         String expectedTitle="amazon";
-        String actuelTitle= driver.getTitle();
+        String actualTitle= driver.getTitle();
 
-        if (expectedTitle.equals(actuelTitle)) {
-            System.out.println("title beklenen title ile ayni");
+        if (expectedTitle.equals(actualTitle)) {
+            System.out.println("title beklenen title ile ayni, test PASS");
         } else {
             System.out.println("title beklenenden farkli, test FAILED");
             System.out.println("aktuel title : "+ driver.getTitle());

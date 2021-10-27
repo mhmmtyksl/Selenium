@@ -3,8 +3,8 @@ package z_homework;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+        // 1.Yeni bir class olusturalim (Homework)
 public class C02_0410_Homework {
-     // 1.Yeni bir class olusturalim (Homework)
 
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver","/Users/muhammetyuksel/Documents/selenium libraries/drivers/chromedriver/");
@@ -14,10 +14,10 @@ public class C02_0410_Homework {
         // oldugunu dogrulayin (verify), degilse dogru basligi yazdirin.
         driver.navigate().to("https://facebook.com");
         String expectedTitle="facebook";
-        String actuelTitle= driver.getTitle();
+        String actualTitle= driver.getTitle();
 
-        if (expectedTitle.equals(actuelTitle)) {
-            System.out.println("title beklenen title ile ayni, VERIFY");
+        if (expectedTitle.equals(actualTitle)) {
+            System.out.println("title beklenen title ile ayni, test PASSED");
         } else {
             System.out.println("title beklenenden farkli, test FAILED");
             System.out.println("aktuel title : "+ driver.getTitle());
@@ -25,13 +25,13 @@ public class C02_0410_Homework {
         // 3.Sayfa URL’inin “facebook” kelimesi icerdigini dogrulayin, icermiyorsa “actual” URL’i
         // yazdirin.
         String expectedUrl="facebook";
-        String actuelUrl= driver.getCurrentUrl();
+        String actualUrl= driver.getCurrentUrl();
 
-        if (actuelUrl.contains(expectedUrl)) {
+        if (actualUrl.contains(expectedUrl)) {
             System.out.println("Test PASSED");
         } else {
             System.out.println("Test FAILED");
-            System.out.println("Gecerli URL : " + actuelUrl);
+            System.out.println("Gecerli URL : " + actualUrl);
         }
 
         // 4.https://www.walmart.com/ sayfasina gidin.
@@ -39,10 +39,10 @@ public class C02_0410_Homework {
 
         // 5. Sayfa basliginin “Walmart.com” icerdigini dogrulayin.
         String expectedTitle1="Walmart.com";
-        String actuelTitle1= driver.getTitle();
+        String actualTitle1= driver.getTitle();
 
-        if (actuelTitle1.contains(expectedTitle1)) {
-            System.out.println("title Walmart.com iceriyor, VERIFY");
+        if (actualTitle1.contains(expectedTitle1)) {
+            System.out.println("title Walmart.com iceriyor, PASSED");
         } else {
             System.out.println("title Walmart.com icermiyor, test FAILED");
             System.out.println("aktuel title : "+ driver.getTitle());

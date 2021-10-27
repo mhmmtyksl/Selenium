@@ -10,14 +10,15 @@ public class C01_0410_TekrarTesti {
 
         System.setProperty("webdriver.chrome.driver","/Users/muhammetyuksel/Documents/selenium libraries/drivers/chromedriver/");
         WebDriver driver = new ChromeDriver();
+
         // 2. Youtube web sayfasına gidin ve sayfa başlığının “youtube” olup olmadığını doğrulayın
         // (verify), eğer değilse doğru başlığı(Actual Title) konsolda yazdirin.
         driver.navigate().to("https://www.youtube.com");
         String expectedTitle="youtube";
-        String actuelTitle= driver.getTitle();
+        String actualTitle= driver.getTitle();
 
-        if (expectedTitle.equals(actuelTitle)) {
-            System.out.println("title beklenen title ile ayni, VERIFY");
+        if (expectedTitle.equals(actualTitle)) {
+            System.out.println("title beklenen title ile ayni, PASSED");
         } else {
             System.out.println("title beklenenden farkli, test FAILED");
             System.out.println("aktuel title : "+ driver.getTitle());
@@ -25,13 +26,13 @@ public class C01_0410_TekrarTesti {
         // 3. Sayfa URL'sinin “youtube” içerip içermediğini (contains) doğrulayın, içermiyorsa doğru
         // URL'yi yazdırın.
         String expectedUrl="youtube";
-        String actuelUrl= driver.getCurrentUrl();
+        String actualUrl= driver.getCurrentUrl();
 
-        if (actuelUrl.contains(expectedUrl)) {
+        if (actualUrl.contains(expectedUrl)) {
             System.out.println("Test PASSED");
         } else {
             System.out.println("Test FAILED");
-            System.out.println("Gecerli URL : " + actuelUrl);
+            System.out.println("Gecerli URL : " + actualUrl);
         }
         // 4. Daha sonra Amazon sayfasina gidin https://www.amazon.com/
         driver.navigate().to("https://www.amazon.com");
@@ -51,9 +52,9 @@ public class C01_0410_TekrarTesti {
         // 9. Ardından sayfa başlığının "Amazon" içerip içermediğini (contains) doğrulayın, Yoksa
         // doğru başlığı(Actual Title) yazdırın.
         String expectedTitle1="Amazon";
-        String actuelTitle1= driver.getTitle();
+        String actualTitle1= driver.getTitle();
 
-        if (actuelTitle1.contains(expectedTitle1)) {
+        if (actualTitle1.contains(expectedTitle1)) {
             System.out.println("Test PASSED");
         } else {
             System.out.println("Test FAILED");
@@ -63,13 +64,13 @@ public class C01_0410_TekrarTesti {
         // 10.Sayfa URL'sinin https://www.amazon.com/ olup olmadığını doğrulayın, degilse doğru
         // URL'yi yazdırın
         String expectedUrl1="https://www.amazon.com/";
-        String actuelUrl1= driver.getCurrentUrl();
+        String actualUrl1= driver.getCurrentUrl();
 
-        if (expectedUrl1.equals(actuelUrl1)) {
+        if (expectedUrl1.equals(actualUrl1)) {
             System.out.println("URL beklenen URL ile ayni, VERIFY");
         } else {
             System.out.println("URL beklenenden farkli, test FAILED");
-            System.out.println("aktuel URL : "+ actuelUrl);
+            System.out.println("aktuel URL : "+ actualUrl);
         }
 
         // 11.Sayfayi kapatin

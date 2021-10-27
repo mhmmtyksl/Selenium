@@ -28,7 +28,7 @@ public class C03_Locators {
         Thread.sleep(2000); // sure koyduk cunku net hizi yetisemedi
 
         //2c email textbox,password textbox, and signin button elementlerini locate ediniz..
-        WebElement emailTextBox=driver.findElement(By.id("session_email")); // mailadres kutusunu bulduk
+        WebElement emailTextBox=driver.findElement(By.id("session_email")); // mailadresi kutusunu bulduk
 
         WebElement passwordBox= driver.findElement(By.id("session_password")); // sifre kutusunu bulduk
 

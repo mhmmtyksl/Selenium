@@ -23,7 +23,7 @@ public class C02_AmazonArama {
         // sonuclarin oldugu yeri id vs ile belirleyemedik bu yuzden x.path kullanarak yerini tayin ettik
 
         System.out.println(sonuc.getText()); // web elementler obje oldugu icin direkt yazdirilamazlar
-        // bunun sahip oldugu yaziyi yazdir mak icin getText() metodu kullanilir.
+        // bunun sahip oldugu yaziyi yazdirmak icin getText() metodu kullanilir.
 
 
     }

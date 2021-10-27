@@ -40,7 +40,7 @@ public class C01_XPath {
         // 3- Delete butonu’nun gorunur oldugunu test edin
         WebElement deleteButonu=driver.findElement(By.xpath("//button[@onclick='deleteElement()']"));
 
-        if (deleteButonu.isDisplayed()) { // isDisplayed== gorunuyorsa anlamindadir.
+        if (deleteButonu.isDisplayed()) { // isDisplayed== gorunuyormu anlamindadir.
             System.out.println("Delete butonu testi PASS");
         } else {
             System.out.println("Delete butonu testi FAILED");

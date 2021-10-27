@@ -13,17 +13,17 @@ public class C01_WebElements {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.facebook.com/");
 
-        // email textbox aali yazdiralim
+        // email textbox a ali yazdiralim
         WebElement mailTextBox = driver.findElement(By.id("email")); // facebook da email yazilacak kutuyu sectik
         mailTextBox.sendKeys("mhmmt.yksl1@gmail.com"); // kutuya mail adresini yazdirdik
 
-        Thread.sleep(2000); // beklettik internet yavas kald cunku
+        Thread.sleep(2000); // beklettik internet yavas kaldi cunku
         mailTextBox.clear(); // yazilanlari geri temizledik
         WebElement mailKutusuTagNameIle = driver.findElement(By.tagName("input")); // mail kutusunu tagname ile sectik
         // mailKutusuTagNameIle.sendKeys("veliGocer@gmail.com");
         // input tagname ile 6 tane web element oldugundan hangisine yazacagina karar veremiyor
         // yazdigimiz element uniq yani tek olmali
-        // kactaneo element oldugunu anlamak icin HTML kodlarinin oldugu yerde ctrl+f yapip // yazip yanina elementi yazinca kactaneoldunu gosterir
+        // kactaneo element oldugunu anlamak icin HTML kodlarinin oldugu yerde ctrl+f yapip // yazip yanina elementi yazinca kactane oldunu gosterir
         // web elementi buldugu icin No such element exception vermez
 
 
